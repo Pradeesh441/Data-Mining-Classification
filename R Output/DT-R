@@ -1,0 +1,119 @@
+
+Call:
+C5.0.default(x = train_data[, -6], y = as.factor(train_data$class_attribute), rules = TRUE)
+
+Rule-Based Model
+Number of samples: 106 
+Number of predictors: 5 
+
+Number of Rules: 10 
+
+Non-standard options: attempt to group attributes
+
+
+Call:
+C5.0.default(x = train_data[, -6], y = as.factor(train_data$class_attribute), rules = TRUE)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Sat Mar 31 01:51:26 2018
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 106 cases (6 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (11/1, lift 4.1)
+	TA > 1
+	course <= 2
+	class_size > 30
+	->  class 1  [0.846]
+
+Rule 2: (9/1, lift 3.9)
+	TA > 1
+	course_instructor > 13
+	course_instructor <= 23
+	course <= 9
+	summer_regular.semester > 1
+	class_size <= 43
+	->  class 1  [0.818]
+
+Rule 3: (2, lift 3.6)
+	TA <= 1
+	class_size <= 14
+	->  class 1  [0.750]
+
+Rule 4: (2, lift 3.6)
+	TA > 1
+	course > 15
+	course <= 16
+	->  class 1  [0.750]
+
+Rule 5: (7, lift 2.4)
+	course <= 16
+	summer_regular.semester > 1
+	class_size <= 18
+	->  class 2  [0.889]
+
+Rule 6: (84/50, lift 1.1)
+	TA > 1
+	->  class 2  [0.407]
+
+Rule 7: (7, lift 2.1)
+	TA > 1
+	course_instructor > 8
+	course_instructor <= 13
+	course > 2
+	summer_regular.semester > 1
+	->  class 3  [0.889]
+
+Rule 8: (11/1, lift 2.0)
+	TA > 1
+	course > 16
+	class_size <= 39
+	->  class 3  [0.846]
+
+Rule 9: (10/1, lift 2.0)
+	TA > 1
+	course <= 13
+	summer_regular.semester <= 1
+	class_size > 10
+	->  class 3  [0.833]
+
+Rule 10: (20/5, lift 1.7)
+	TA <= 1
+	class_size > 14
+	->  class 3  [0.727]
+
+Default class: 3
+
+
+Evaluation on training data (106 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	    10   15(14.2%)   <<
+
+
+	   (a)   (b)   (c)    <-classified as
+	  ----  ----  ----
+	    20     2          (a): class 1
+	     1    32     6    (b): class 2
+	     1     5    39    (c): class 3
+
+
+	Attribute usage:
+
+	100.00%	TA
+	 63.21%	class_size
+	 50.00%	course
+	 31.13%	summer_regular.semester
+	 15.09%	course_instructor
+
+
+Time: 0.0 secs
+
+[1] 0.9111111

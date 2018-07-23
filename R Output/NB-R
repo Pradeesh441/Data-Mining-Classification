@@ -1,0 +1,47 @@
+
+Naive Bayes Classifier for Discrete Predictors
+
+Call:
+naiveBayes.default(x = train_data[, -6], y = as.factor(train_data$class_attribute))
+
+A-priori probabilities:
+as.factor(train_data$class_attribute)
+        1         2         3 
+0.2075472 0.3679245 0.4245283 
+
+Conditional probabilities:
+                                     TA
+as.factor(train_data$class_attribute)     [,1]      [,2]
+                                    1 1.909091 0.2942449
+                                    2 1.871795 0.3386884
+                                    3 1.666667 0.4767313
+
+                                     course_instructor
+as.factor(train_data$class_attribute)     [,1]     [,2]
+                                    1 12.90909 6.117182
+                                    2 12.10256 7.916654
+                                    3 14.75556 6.467245
+
+                                     course
+as.factor(train_data$class_attribute)      [,1]     [,2]
+                                    1  5.272727 5.311101
+                                    2 10.179487 6.492391
+                                    3  8.333333 7.772329
+
+                                     summer_regular.semester
+as.factor(train_data$class_attribute)     [,1]      [,2]
+                                    1 1.909091 0.2942449
+                                    2 1.846154 0.3655178
+                                    3 1.666667 0.4767313
+
+                                     class_size
+as.factor(train_data$class_attribute)     [,1]     [,2]
+                                    1 33.09091 11.74697
+                                    2 27.41026 11.45177
+                                    3 28.00000 13.24936
+
+        Length Class  Mode     
+apriori 3      table  numeric  
+tables  5      -none- list     
+levels  3      -none- character
+call    3      -none- call     
